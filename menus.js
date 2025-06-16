@@ -7,7 +7,7 @@ function solicitarTempoUsuario(tasks) {
       left: 0,
       width: '100vw',
       height: '100vh',
-      background: 'rgba(0, 0, 0, 0.5)',
+      background: 'rgba(0, 0, 0, 0.7)', // Changed to darker gray
       backdropFilter: 'blur(6px)',
       display: 'flex',
       alignItems: 'center',
@@ -20,10 +20,10 @@ function solicitarTempoUsuario(tasks) {
 
     const caixa = document.createElement('div');
     Object.assign(caixa.style, {
-      background: 'rgba(20, 20, 20, 0.95)',
+      background: 'rgba(30, 30, 30, 0.95)', // Changed to dark gray
       display: 'flex',
       flexDirection: 'column',
-      color: '#f0f0f0',
+      color: '#eee', // Changed to light gray
       padding: '35px 35px',
       borderRadius: '20px',
       boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
@@ -47,7 +47,7 @@ function solicitarTempoUsuario(tasks) {
       top: '15px',
       background: 'transparent',
       border: 'none',
-      color: '#ccc',
+      color: '#bbb', // Changed to gray
       fontSize: '22px',
       cursor: 'pointer',
       transition: 'color 0.2s ease',
@@ -55,8 +55,8 @@ function solicitarTempoUsuario(tasks) {
       userSelect: 'none',
       lineHeight: '1'
     });
-    botaoFechar.onmouseover = () => (botaoFechar.style.color = 'white');
-    botaoFechar.onmouseout = () => (botaoFechar.style.color = '#ccc');
+    botaoFechar.onmouseover = () => (botaoFechar.style.color = '#ddd'); // Changed to lighter gray
+    botaoFechar.onmouseout = () => (botaoFechar.style.color = '#bbb'); // Changed to gray
     botaoFechar.onclick = () => {
       document.body.removeChild(overlay);
     };
@@ -66,7 +66,7 @@ function solicitarTempoUsuario(tasks) {
     Object.assign(titulo.style, {
       marginBottom: '18px',
       fontSize: '22px',
-      color: '#ffffff'
+      color: '#eee' // Changed to light gray
     });
     caixa.appendChild(titulo);
 
@@ -95,13 +95,13 @@ function solicitarTempoUsuario(tasks) {
         padding: '6px 10px',
         fontWeight: 'bold',
         borderRadius: '8px',
-        backgroundColor: '#1a1a1a',
+        backgroundColor: '#222', // Changed to dark gray
         transition: 'background 0.2s',
         width: '100%'
       });
 
-      label.onmouseenter = () => label.style.background = 'rgba(255,255,255,0.05)';
-      label.onmouseleave = () => label.style.background = '#1a1a1a';
+      label.onmouseenter = () => label.style.background = 'rgba(255,255,255,0.1)'; // Changed to grayscale hover
+      label.onmouseleave = () => label.style.background = '#222'; // Changed to dark gray
 
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
@@ -138,7 +138,7 @@ function solicitarTempoUsuario(tasks) {
       fontWeight: 'bold',
       fontSize: '16px',
       marginBottom: '12px',
-      color: '#dddddd'
+      color: '#eee' // Changed to light gray
     });
     caixa.appendChild(tituloTempo);
 
@@ -156,7 +156,7 @@ function solicitarTempoUsuario(tasks) {
     Object.assign(decrementButton.style, {
       padding: '8px 12px',
       fontSize: '18px',
-      background: 'linear-gradient(90deg, #c43aff, #932fff)',
+      background: 'linear-gradient(90deg, #555, #333)', // Changed to grayscale gradient
       color: '#fff',
       border: 'none',
       borderRadius: '8px',
@@ -173,10 +173,10 @@ function solicitarTempoUsuario(tasks) {
       padding: '8px',
       fontSize: '16px',
       textAlign: 'center',
-      border: '1px solid #555',
+      border: '1px solid #666', // Changed to darker gray
       borderRadius: '10px',
-      background: '#333',
-      color: '#fff'
+      background: '#444', // Changed to dark gray
+      color: '#eee' // Changed to light gray
     });
 
     const incrementButton = document.createElement('button');
@@ -184,7 +184,7 @@ function solicitarTempoUsuario(tasks) {
     Object.assign(incrementButton.style, {
       padding: '8px 12px',
       fontSize: '18px',
-      background: 'linear-gradient(90deg, #c43aff, #932fff)',
+      background: 'linear-gradient(90deg, #555, #333)', // Changed to grayscale gradient
       color: '#fff',
       border: 'none',
       borderRadius: '8px',
@@ -209,7 +209,7 @@ function solicitarTempoUsuario(tasks) {
 
     const erro = document.createElement('p');
     Object.assign(erro.style, {
-      color: 'tomato',
+      color: '#c0a0a0', // Changed to muted red-gray
       fontSize: '14px',
       margin: '6px 0',
       display: 'none'
@@ -229,7 +229,7 @@ function solicitarTempoUsuario(tasks) {
       btn.textContent = texto;
       Object.assign(btn.style, {
         padding: '12px 28px',
-        background: 'linear-gradient(90deg, #c43aff, #932fff)',
+        background: 'linear-gradient(90deg, #555, #333)', // Changed to grayscale gradient
         border: 'none',
         borderRadius: '12px',
         color: 'white',
@@ -284,7 +284,7 @@ function solicitarTempoUsuario(tasks) {
             erro.style.display = 'block';
             return;
         }
-      
+
         document.body.removeChild(overlay);
         resolve({ tipo: 'rascunho', tempo: valor, tarefasSelecionadas });
     });
@@ -321,7 +321,7 @@ function solicitarProva(tasks) {
       left: 0,
       width: '100vw',
       height: '100vh',
-      background: 'rgba(0, 0, 0, 0.5)',
+      background: 'rgba(0, 0, 0, 0.7)', // Changed to darker gray
       backdropFilter: 'blur(6px)',
       display: 'flex',
       alignItems: 'center',
@@ -334,8 +334,8 @@ function solicitarProva(tasks) {
 
     const caixa = document.createElement('div');
     Object.assign(caixa.style, {
-      background: 'rgba(20, 20, 20, 0.95)',
-      color: '#f0f0f0',
+      background: 'rgba(30, 30, 30, 0.95)', // Changed to dark gray
+      color: '#eee', // Changed to light gray
       padding: '35px 35px',
       borderRadius: '20px',
       boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
@@ -360,7 +360,7 @@ function solicitarProva(tasks) {
       top: '15px',
       background: 'transparent',
       border: 'none',
-      color: '#ccc',
+      color: '#bbb', // Changed to gray
       fontSize: '22px',
       cursor: 'pointer',
       transition: 'color 0.2s ease',
@@ -368,18 +368,18 @@ function solicitarProva(tasks) {
       userSelect: 'none',
       lineHeight: '1'
     });
-    botaoFechar.onmouseover = () => (botaoFechar.style.color = 'white');
-    botaoFechar.onmouseout = () => (botaoFechar.style.color = '#ccc');
+    botaoFechar.onmouseover = () => (botaoFechar.style.color = '#ddd'); // Changed to lighter gray
+    botaoFechar.onmouseout = () => (botaoFechar.style.color = '#bbb'); // Changed to gray
     botaoFechar.onclick = () => {
       document.body.removeChild(overlay);
     };
-    
+
     const titulo = document.createElement('h2');
     titulo.textContent = '📝 Provas';
     Object.assign(titulo.style, {
       marginBottom: '18px',
       fontSize: '22px',
-      color: '#ffffff'
+      color: '#eee' // Changed to light gray
     });
     caixa.appendChild(titulo);
 
@@ -407,38 +407,38 @@ function solicitarProva(tasks) {
         padding: '10px 12px',
         fontWeight: 'bold',
         borderRadius: '8px',
-        backgroundColor: '#1a1a1a',
+        backgroundColor: '#222', // Changed to dark gray
         transition: 'background 0.2s',
         width: '100%'
       });
-    
-      label.onmouseenter = () => label.style.background = 'rgba(255,255,255,0.05)';
-      label.onmouseleave = () => label.style.background = '#1a1a1a';
-    
+
+      label.onmouseenter = () => label.style.background = 'rgba(255,255,255,0.1)'; // Changed to grayscale hover
+      label.onmouseleave = () => label.style.background = '#222'; // Changed to dark gray
+
       const topRow = document.createElement('div');
       topRow.style.display = 'flex';
       topRow.style.alignItems = 'center';
       topRow.style.gap = '10px';
-    
+
       const checkbox = document.createElement('input');
       checkbox.type = 'checkbox';
       checkbox.style.transform = 'scale(1.2)';
       checkbox.style.cursor = 'pointer';
-    
+
       const totalQuestoes = Object.keys(task.answer_answers).length;
       const nota = task.result_score;
       const restante = totalQuestoes - nota;
-    
+
       const span = document.createElement('span');
       const title = task.title || `Tarefa`;
       const notaS = nota === totalQuestoes ? `NOTA [${nota}] MAXIMA` : `NOTA [${nota}]`;
       let emoji = '🔹';
       span.textContent = `${emoji} ${title}`;
-    
+
       topRow.appendChild(checkbox);
       topRow.appendChild(span);
       label.appendChild(topRow);
-    
+
       const inputContainer = document.createElement('div');
       inputContainer.style.display = 'none';
       inputContainer.style.flexDirection = 'column';
@@ -448,26 +448,28 @@ function solicitarProva(tasks) {
       const labelInput = document.createElement('label');
       labelInput.textContent = `Selecione Quantidade: MAXIMO [${totalQuestoes}]`;
       labelInput.style.fontSize = '13px';
-      labelInput.style.color = '#ccc';
-    
+      labelInput.style.color = '#bbb'; // Changed to gray
+
       const input = document.createElement('input');
       input.type = 'number';
       input.min = 1;
       input.max = restante;
       input.value = 1;
-      input.style.width = '100%';
-      input.style.padding = '6px 10px';
-      input.style.border = '1px solid #444';
-      input.style.borderRadius = '6px';
-      input.style.backgroundColor = '#2a2a2a';
-      input.style.color = '#fff';
-    
+      Object.assign(input.style, {
+        width: '100%',
+        padding: '6px 10px',
+        border: '1px solid #666', // Changed to darker gray
+        borderRadius: '6px',
+        backgroundColor: '#3a3a3a', // Changed to dark gray
+        color: '#eee' // Changed to light gray
+      });
+
       inputContainer.appendChild(labelInput);
       inputContainer.appendChild(input);
       label.appendChild(inputContainer);
-    
+
       atividadesContainer.appendChild(label);
-    
+
       checkbox.addEventListener('change', () => {
         checkboxElements.forEach(({ checkbox: cb, inputContainer: ic, input: inp }) => {
           if (cb !== checkbox) {
@@ -475,13 +477,13 @@ function solicitarProva(tasks) {
             ic.style.display = 'none';
           }
         });
-    
+
         if (checkbox.checked) {
           if (restante === 0) {
             input.disabled = true;
             input.value = 'Máximo';
             input.style.textAlign = 'center';
-            input.style.color = '#aaa';
+            input.style.color = '#ccc'; // Changed to gray
             input.style.cursor = 'not-allowed';
             botao.disabled = true;
             botao.style.opacity = '0.6';
@@ -490,7 +492,7 @@ function solicitarProva(tasks) {
             input.disabled = false;
             input.value = 1;
             input.style.textAlign = 'left';
-            input.style.color = '#fff';
+            input.style.color = '#eee'; // Changed to light gray
             input.style.cursor = 'text';
             botao.disabled = false;
             botao.style.opacity = '1';
@@ -508,12 +510,12 @@ function solicitarProva(tasks) {
     });
 
     caixa.appendChild(atividadesContainer);
-    
+
       const msg = document.createElement('p');
       Object.assign(msg.style, {
         marginBottom: '18px',
         fontSize: '12px',
-        color: '#f2f2f2'
+        color: '#eee' // Changed to light gray
       });
       msg.textContent = 'Selecione a prova para enviar, tenha certeza que a prova está em rascunho pelo menos todas as questões respondidas, e que a prova não esteja enviada!, e que o tempo minimo ja esteja atingido!';
       caixa.appendChild(msg);
@@ -521,9 +523,9 @@ function solicitarProva(tasks) {
       Object.assign(msg2.style, {
         marginBottom: '18px',
         fontSize: '13px',
-        color: '#f1c40f',
+        color: '#aaa', // Changed to dark gray
         fontWeight: 'bold',
-        backgroundColor: '#2c2c2c',
+        backgroundColor: '#333', // Changed to dark gray
         padding: '10px',
         borderRadius: '5px',
         display: 'flex',
@@ -533,10 +535,10 @@ function solicitarProva(tasks) {
       msg2.textContent = '⚠️ OBS: ELE SO CORRIGE A PROVA QUE VOCÊ FEZ NO DIA!!! SE PASSAR DO DIA ELE NAO ARRUMA MAIS!';
       caixa.appendChild(msg2);
 
-    
+
     const erro = document.createElement('p');
     Object.assign(erro.style, {
-      color: 'tomato',
+      color: '#c0a0a0', // Changed to muted red-gray
       fontSize: '14px',
       margin: '6px 0',
       display: 'none'
@@ -548,7 +550,7 @@ function solicitarProva(tasks) {
     Object.assign(botao.style, {
       marginTop: '15px',
       padding: '12px 28px',
-      background: 'linear-gradient(90deg, #c43aff, #932fff)',
+      background: 'linear-gradient(90deg, #555, #333)', // Changed to grayscale gradient
       border: 'none',
       borderRadius: '12px',
       color: 'white',
@@ -571,7 +573,7 @@ function solicitarProva(tasks) {
       const quantidadeSelecionada = selecionado
         ? (selecionado.input.disabled ? 'Máximo' : parseInt(selecionado.input.value, 10))
         : 0;
-      
+
       document.body.removeChild(overlay);
       resolve({
         quantidade: quantidadeSelecionada,
@@ -595,7 +597,7 @@ function previewProva(tasks) {
       left: 0,
       width: '100vw',
       height: '100vh',
-      background: 'rgba(0, 0, 0, 0.5)',
+      background: 'rgba(0, 0, 0, 0.7)', // Changed to darker gray
       backdropFilter: 'blur(6px)',
       display: 'flex',
       alignItems: 'center',
@@ -608,8 +610,8 @@ function previewProva(tasks) {
 
     const caixa = document.createElement('div');
     Object.assign(caixa.style, {
-      background: 'rgba(20, 20, 20, 0.95)',
-      color: '#f0f0f0',
+      background: 'rgba(30, 30, 30, 0.95)', // Changed to dark gray
+      color: '#eee', // Changed to light gray
       padding: '30px 30px',
       borderRadius: '20px',
       boxShadow: '0 10px 30px rgba(0,0,0,0.4)',
@@ -631,7 +633,7 @@ function previewProva(tasks) {
       top: '15px',
       background: 'transparent',
       border: 'none',
-      color: '#ccc',
+      color: '#bbb', // Changed to gray
       fontSize: '22px',
       cursor: 'pointer',
       transition: 'color 0.2s ease',
@@ -639,18 +641,18 @@ function previewProva(tasks) {
       userSelect: 'none',
       lineHeight: '1'
     });
-    botaoFechar.onmouseover = () => (botaoFechar.style.color = 'white');
-    botaoFechar.onmouseout = () => (botaoFechar.style.color = '#ccc');
+    botaoFechar.onmouseover = () => (botaoFechar.style.color = '#ddd'); // Changed to lighter gray
+    botaoFechar.onmouseout = () => (botaoFechar.style.color = '#bbb'); // Changed to gray
     botaoFechar.onclick = () => {
       document.body.removeChild(overlay);
     };
-    
+
     const titulo = document.createElement('h2');
     titulo.textContent = '📝 PROVAS CONCLUIDAS';
     Object.assign(titulo.style, {
       marginBottom: '18px',
       fontSize: '22px',
-      color: '#ffffff'
+      color: '#eee' // Changed to light gray
     });
     caixa.appendChild(titulo);
 
@@ -678,14 +680,14 @@ function previewProva(tasks) {
         padding: '10px 12px',
         fontWeight: 'bold',
         borderRadius: '8px',
-        backgroundColor: '#1a1a1a',
+        backgroundColor: '#222', // Changed to dark gray
         transition: 'background 0.2s',
         width: '100%'
       });
-    
-      label.onmouseenter = () => label.style.background = 'rgba(255,255,255,0.05)';
-      label.onmouseleave = () => label.style.background = '#1a1a1a';
-    
+
+      label.onmouseenter = () => label.style.background = 'rgba(255,255,255,0.1)'; // Changed to grayscale hover
+      label.onmouseleave = () => label.style.background = '#222'; // Changed to dark gray
+
       const topRow = document.createElement('div');
       topRow.style.display = 'flex';
       topRow.style.alignItems = 'center';
@@ -693,23 +695,23 @@ function previewProva(tasks) {
 
 
       const nota = task.result_score;
-    
+
       const span = document.createElement('span');
       const title = task.task_title;
       let emoji = '🔹';
       span.textContent = `${emoji} ${title} - NOTA [${nota}]`;
-    
+
       topRow.appendChild(span);
       label.appendChild(topRow);
-    
+
       atividadesContainer.appendChild(label);
-    });    
+    });
 
     caixa.appendChild(atividadesContainer);
 
     const erro = document.createElement('p');
     Object.assign(erro.style, {
-      color: 'tomato',
+      color: '#c0a0a0', // Changed to muted red-gray
       fontSize: '14px',
       margin: '6px 0',
       display: 'none'
@@ -722,7 +724,7 @@ function previewProva(tasks) {
     Object.assign(botao.style, {
       marginTop: '15px',
       padding: '12px 28px',
-      background: 'linear-gradient(90deg, #c43aff, #932fff)',
+      background: 'linear-gradient(90deg, #555, #333)', // Changed to grayscale gradient
       border: 'none',
       borderRadius: '12px',
       color: 'white',
@@ -742,3 +744,4 @@ function previewProva(tasks) {
     document.body.appendChild(overlay);
   });
 }
+
